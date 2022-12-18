@@ -4,8 +4,8 @@
 // 2 4 | 3 4
 // 3 2 | 3 3
 // Результирующая матрица будет:
-// 18 20  2*3 + 4*3 =6+12=18   2*4 + 4*3=8+12=20
-// 15 18  3*3 + 3*2 =9+6=15   3*4 + 2*3=12+6=18  
+// 18 20  
+// 15 18   
 
 try
 {
@@ -22,14 +22,14 @@ try
     if (rows1 < 1 || cols1 < 1 || rows2 < 1 || cols2 < 1)
         Console.WriteLine("Enter positive numbers only!");
     else if (rows2 != cols1)
-        Console.WriteLine("Number of columns of 1 manrix must be equals to number of rows of 2 matrix!");
+        Console.WriteLine("Number of columns of first matrix must be equals to number of rows of second matrix!");
     else
     {
         int[,] array1 = CreateAndFillArray(rows1, cols1);
-        Console.WriteLine("The random first array of {0} rows and {1} columns is:", rows1, cols1);
+        Console.WriteLine("The random first matrix of {0} rows and {1} columns is:", rows1, cols1);
         PrintTable(array1);
         int[,] array2 = CreateAndFillArray(rows2, cols2);
-        Console.WriteLine("The random second array of {0} rows and {1} columns is:", cols2, rows2);
+        Console.WriteLine("The random second matrix of {0} rows and {1} columns is:", cols2, rows2);
         PrintTable(array2);
         int[,] resultArray = GetProductMatrixes(array1, array2);
         Console.WriteLine("The result of multiplication of 2 matrixes is:");
